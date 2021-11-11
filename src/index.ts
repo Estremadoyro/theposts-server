@@ -1,9 +1,12 @@
 import { MikroORM } from "@mikro-orm/core";
 import { __prod__ } from "./constants";
+import { Post } from "./entities/Post";
 
 const main = async () => {
   const orm = await MikroORM.init({
-    entities: ["src/entities/**/*.ts"],
+    // It won't find it in the JS compiled file
+    // entities: ["src/entities/**/*.ts"],
+    entities: [Post],
     dbName: "theposts",
     type: "postgresql",
     user: "postgres",

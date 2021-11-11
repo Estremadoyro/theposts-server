@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es2017",
+    //"target": "es2017",
+    "target": "es5",
     "module": "commonjs",
-    "lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
+    //"lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
+    "lib": ["es5", "es6", "dom"],
     "skipLibCheck": true,
     "sourceMap": true,
     "outDir": "./dist",
